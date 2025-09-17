@@ -10,7 +10,7 @@ key111=st.secrets['API_KEY']
 client = OpenAI(api_key=key111)
 # ai 설정
 
-st.title('앱 이름')
+st.title('친구 상담')
 st.text_input('이름을 입력해주세요',key='u_name')
 if st.session_state.u_name:
     st.subheader(f"반가워요, {st.session_state.u_name}님! 저는 당신의 친구입니다.")
@@ -87,4 +87,5 @@ if st.session_state.u_name:
 # # 이렇게 하면 챗봇이 처음부터 지정한 역할대로 대답할 수 있습니다.
 # if "messages" not in st.session_state:
 #     st.session_state.messages = []
+
 #     st.session_state.messages = [{"role": "system", "content": system_message}]
